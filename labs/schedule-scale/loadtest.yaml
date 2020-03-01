@@ -22,7 +22,13 @@ items:
         containers:
         - image: quay.io/redhattraining/loadtest:v1.0
           name: loadtest
-          resources: {}
+          resources: 
+              requests:
+                      cpu: "25m"
+                      memory: 25Mi
+              limits:
+                      cpu: "100m"
+                      memory: 100Mi
   status: {}
 - apiVersion: v1
   kind: Service
