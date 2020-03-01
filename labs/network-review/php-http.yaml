@@ -24,11 +24,11 @@ spec:
             memory: "128Mi"
             cpu: '0.5'
         # Set the container image name
-        image: ''
+        image: 'quay.io/redhattraining/php-ssl:v1.0'
         name: php-http
         ports:
           # Define the container port
-        - containerPort:
+        - containerPort: 8080
           name: php-http
 ---
 apiVersion: v1

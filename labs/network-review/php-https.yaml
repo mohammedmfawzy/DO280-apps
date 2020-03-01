@@ -24,11 +24,11 @@ spec:
             memory: "128Mi"
             cpu: '0.5'
         # Set the container image name
-        image: ''
+        image: 'quay.io/redhattraining/php-ssl:v1.1'
         name: php-https
         ports:
           # Define the container port
-        - containerPort:
+        - containerPort: 8443
           name: php-https
         volumeMounts:
         - name: tls-certs
@@ -38,7 +38,7 @@ spec:
       - name: tls-certs
         secret:
           # Define the name the secret
-          secretName:
+          secretName: php-certs
 ---
 apiVersion: v1
 kind: Service
