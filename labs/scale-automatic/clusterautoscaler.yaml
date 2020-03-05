@@ -5,8 +5,8 @@ metadata:
 spec:
   podPriorityThreshold: -10
   resourceLimits:
-    maxNodesTotal: 5
+    maxNodesTotal: 6
   scaleDown:
-    enabled: false
+    enabled: true
     delayAfterAdd: 3m
     unneededTime: 3m
